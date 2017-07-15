@@ -1,0 +1,7 @@
+Package: bowser
+Version: 0.1
+Section: base
+Priority: optional
+Architecture: amd64
+Maintainer: Mehmet Yavuz Uzun <memtyovz@gmail.com>
+Description: Web Browser
