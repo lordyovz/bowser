@@ -7,7 +7,6 @@ public class Bowser : Granite.Application {
     private Window window;
     private Entry urlbar;
     private WebView web_view;
-    private Gtk.Stack stack;
     
     private Regex protocol_regex;
     private Regex stuf_regex;
@@ -65,7 +64,7 @@ public class Bowser : Granite.Application {
 		var homebutton = new Button.from_icon_name ("go-home", Gtk.IconSize.LARGE_TOOLBAR);
 		headerbar.add (homebutton);
 		homebutton.clicked.connect (() => {
-			web_view.load_uri("https://lordyovz.github.io/litsearch/");
+			web_view.load_uri("https://www.porcay.com/ana");
 		});
 
 
@@ -75,20 +74,14 @@ public class Bowser : Granite.Application {
 
         urlbar.set_placeholder_text ("...");
         this.web_view = new WebView ();
-        var scrolled_window = new ScrolledWindow (null, null);
-        scrolled_window.set_policy (PolicyType.AUTOMATIC, PolicyType.AUTOMATIC);
-        scrolled_window.add (this.web_view);
-        var stack = new Gtk.Stack ();
-        stack.add (scrolled_window);
-        window.add (stack);
+        window.add (this.web_view);
         var primary_color_button = new Gtk.ColorButton.with_rgba ({ 255, 255, 255, 255 });
         Granite.Widgets.Utils.set_color_primary (window, primary_color_button.rgba);
-
-        window.set_default_size (900, 600);
+        window.set_default_size (900, 650);
         window.set_titlebar (headerbar);
         window.title = "Bowser";
         window.show_all ();
-        this.web_view.load_uri("https://lordyovz.github.io/litsearch/");
+        this.web_view.load_uri("https://www.porcay.com/ana");
         try {
             this.protocol_regex = new Regex (".*://.*");
         } catch (RegexError e) {
