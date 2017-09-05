@@ -13,28 +13,6 @@ public class Bowser : Granite.Application {
     
     private const string DEFAULT_PROTOCOL = "http";
 
-    construct {
-        application_id = "com.github.lordyovz.bowser";
-        flags = ApplicationFlags.FLAGS_NONE;
-
-        program_name = "Bowser";
-        
-        build_version = "0.1";
-        main_url = "https://github.com/lordyovz/bowser";
-        bug_url = "https://github.com/lordyovz/bowser/issues";
-        help_url = "https://github.com/lordyovz/bowser/issues";
-
-        about_documenters = { "Mehmet Yavuz Uzun <memtyovz@gmail.com>" };
-        about_artists = { "Mehmet Yavuz Uzun <memtyovz@gmail.com>" };
-        about_authors = {
-            "Mehmet Yavuz Uzun <memtyovz@gmail.com>",
-
-        };
-
-        about_comments = "A minimal browser powered by Webkit";
-        about_license_type = Gtk.License.GPL_3_0;
-    }
-
     public override void activate () {
         var window = new Gtk.Window ();
 
